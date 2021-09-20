@@ -9,7 +9,7 @@ public class ExerciseImplementation03Test {
     @Test
     public void testSimple() {
         String unsorted =  "the quick brown fox jumps over the lazy dog";
-        String sorted = "        abcdeeefghhijklmnooopqrrsttuuvxyz";
+        String sorted = "        abcdeeefghhijklmnoooopqrrsttuuvwxyz";
 
         assertEquals(sorted, ExerciseImplementation03.bubbleSort(unsorted));
 
