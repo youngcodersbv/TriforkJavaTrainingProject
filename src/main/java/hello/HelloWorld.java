@@ -2,7 +2,6 @@ package hello;
 
 import java.util.ArrayList;
 import java.util.List;
-import hello.ContretePerson;
 
 public class HelloWorld {
 
