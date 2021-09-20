@@ -1,9 +1,13 @@
 package hello;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class HelloWorld {
+    public static Logger logger = LoggerFactory.getLogger(HelloWorld.class);
 
     public static void main(String[] args) {
 
@@ -21,11 +25,11 @@ public class HelloWorld {
         tellers.add(jan);
 
         for (AbstractPerson person: people) {
-            System.out.println(String.format("Ik ben %s", person.getName()));
+            logger.info(String.format("Ik ben %s", person.getName()));
         }
 
         for (StoryTeller teller: tellers) {
-            System.out.println(teller.tellLifeStory());
+            logger.info(teller.tellLifeStory());
         }
 
     }
