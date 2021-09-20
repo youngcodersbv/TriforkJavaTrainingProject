@@ -1,5 +1,6 @@
 package hello;
 
+import java.util.ArrayList;
 import java.util.List;
 import hello.ContretePerson;
 
@@ -12,8 +13,13 @@ public class HelloWorld {
         ContretePerson kees = new ContretePerson("Kees Kaas", 43);
         ContretePerson jan = new VeryImportantPerson("Jan Smit", 48);
 
-        List<AbstractPerson> people = List.of(kees, jan);
-        List<StoryTeller> tellers = List.of(kees, jan);
+        List<AbstractPerson> people = new ArrayList<>();
+        people.add(kees);
+        people.add(jan);
+
+        List<StoryTeller> tellers = new ArrayList<>();
+        tellers.add(kees);
+        tellers.add(jan);
 
         for (AbstractPerson person: people) {
             System.out.println(String.format("Ik ben %s", person.getName()));
