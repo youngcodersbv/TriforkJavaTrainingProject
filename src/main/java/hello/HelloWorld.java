@@ -11,7 +11,7 @@ public class HelloWorld {
 
     public static void main(String[] args) {
 
-        logger.warn("HelloWorld");
+        logger.warn("HelloWorld {}", 10);
 
         ContretePerson kees = new ContretePerson("Kees Kaas", 43);
         ContretePerson jan = new VeryImportantPerson("Jan Smit", 48);
