@@ -11,6 +11,8 @@ public class HelloWorld {
 
     public static void main(String[] args) {
 
+
+
         logger.warn("HelloWorld {}", 10);
 
         ContretePerson kees = new ContretePerson("Kees Kaas", 43);
@@ -32,5 +34,17 @@ public class HelloWorld {
             logger.info(teller.tellLifeStory());
         }
 
+        CommunityWithGenerics community = new CommunityWithGenerics();
+        community.addPersonToCommunity(kees);
+        community.addPersonToCommunity(jan);
+
+        community.addSomethingElse(new Integer(11));
+
+        Object x = community.getNthPersonFromCommunity(0); // Kees
+        ((AbstractPerson) x).getAge();
+        x = community.getNthPersonFromCommunity(1); // Jan
+        ((AbstractPerson) x).getAge();
+        x = community.getNthPersonFromCommunity(2); // ClassCastException
+        ((AbstractPerson) x).getAge();
     }
 }
